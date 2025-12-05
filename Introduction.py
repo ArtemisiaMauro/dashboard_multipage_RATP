@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 import plotly.express as px
-import subprocess, sys
 import re
 
 st.caption("Artemisia MAURO")
@@ -52,4 +51,5 @@ col2.metric(
     label="🚇 Lignes",
     value=f"{nb_lignes:,.0f}"
 )
+
 st.write("Parmi les 14 lignes analysées, la RATP a vu sa part d'usagers augmenter d'un peu plus de 33%, c'est-à-dire de près de 305 millions d'usagers.")
