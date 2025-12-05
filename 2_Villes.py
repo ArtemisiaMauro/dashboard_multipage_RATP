@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 import plotly.express as px
-import subprocess, sys
 import re
 
 df = pd.read_excel("trafic_2021.xlsx")
@@ -26,4 +25,5 @@ chart = alt.Chart(df_top_villes).mark_bar(color='#1f77b4').encode(
 ).properties(height=300)
 
 st.altair_chart(chart, use_container_width=True)
+
 st.write("La ville bien en tête du classement est la capitale, avec près de 870 millions d'usagers. Parmi les 4 autres villes du classement, 3 d'entre elles se situent dans le département des Hauts-de-Seine (92) : ces villes sont parmi les principales communes du département.")
