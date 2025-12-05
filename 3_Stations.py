@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 import plotly.express as px
-import subprocess, sys
 import re
 
 df = pd.read_excel("trafic_2021.xlsx")
@@ -38,4 +37,5 @@ chart = alt.Chart(df_top_stations).mark_bar().encode(
 st.altair_chart(chart, use_container_width=True)
 
 st.write("Comme vu précédemment, les quartiers les plus fréquentés étaient parfois ceux comportant une ou plusieurs gares. Ce dernier graphique nous montre qu'effectivement la présence de ces gares doit être l'un des facteurs les plus importants quant au nombre d'usagers répertoriés.")
+
 st.write("Parmi les 10 stations qui comptaient le plus d'usagers en 2021, 7 d'entres elles sont des stations desservant de grandes gares parisiennes. À côté de ces gares nous retrouvons aussi de grandes stations connues pour leur fréquentation comme Châtelet Les Halles ou Nanterre Préfecture.")
